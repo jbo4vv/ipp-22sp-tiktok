@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-
+import Videos from './dbModel';
 
 
 //app config
@@ -21,6 +21,21 @@ mongoose.connect(connection_url,{
 
 //api endpoints
 app.get("/", (req,res) => res.status(200).send('Hello World'));
+
+app.post('/v2/posts', (req,res) =>{
+    const dbVideos = req.body
+
+    Videos.create(dbVideos, (err, data) => {
+        if (err){
+            //500 = 'server error'
+            res.status(500).send(err);
+        }else{
+            //201 = 'created'
+            res.status(201).send(data);
+        }
+    });
+
+})
 
 //listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`))
