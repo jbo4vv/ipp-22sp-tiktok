@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import Videos from './dbModel';
+import data from "./data.js";
+import Videos from "./dbModel.js";
 
 
 //app config
@@ -10,6 +11,7 @@ const port = 9000;
 //middlewares
 
 //DB config
+//p-word:MN1y7ADGomSXJYTF
 const connection_url='mongodb+srv://admin:MN1y7ADGomSXJYTF@cluster0.54rpi.mongodb.net/tiktok?retryWrites=true&w=majority';
 
 mongoose.connect(connection_url,{
@@ -21,6 +23,8 @@ mongoose.connect(connection_url,{
 
 //api endpoints
 app.get("/", (req,res) => res.status(200).send('Hello World'));
+
+app.get('/v1/posts', (req,res) => res.status(200).send(data));
 
 app.post('/v2/posts', (req,res) =>{
     const dbVideos = req.body
