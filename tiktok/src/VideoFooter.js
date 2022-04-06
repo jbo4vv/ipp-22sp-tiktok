@@ -6,18 +6,18 @@ import Ticker from "react-ticker";
 function VideoFooter({ channel, description, song }) {
     return (
         <div className="videoFooter">
-            <div className='videoFooter_text'>
+            <div className='videoFooter__text'>
                 <h3>{ channel }</h3>
                 <p>{ description }</p>
 
-                <div className="videoFooter_ticker">
+                <div className="videoFooter__ticker">
                     <MusicNoteIcon
-                    className="videoFooter_icon"/>
+                    className="videoFooter__icon"/>
 
                 <Ticker mode ="smooth">
                     {({index}) => (
                         <>
-                        <p>{ song }</p>
+                            <p>{ song }</p>
                         </>
                     )} 
                 </Ticker>
@@ -26,7 +26,7 @@ function VideoFooter({ channel, description, song }) {
             </div>
 
 
-            <img className="videoFooter_record"
+            <img className="videoFooter__record"
             src="https://static.thenounproject.com/png/934821-200.png"
             alt=""
             />

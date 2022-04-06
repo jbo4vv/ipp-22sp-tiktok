@@ -26,13 +26,13 @@ function Video( {url, channel, description, song, likes, messages, shares}) {
 
         <video 
         onClick= {handleVideoPress}
-        className="video_play"
+        className="video__player"
         loop
         ref = {videoRef}
         src ={url}></video>
 
         <VideoFooter channel={'dogChannel'} 
-        description={'Dog'} song={'What a Wonderful World'}/>
+        description={'Dog'} song={'someSong'}/>
         <VideoSidebar likes ={likes} messages={messages}
         shares = {shares} />
             
