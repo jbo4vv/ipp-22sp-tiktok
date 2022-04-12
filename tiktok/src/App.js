@@ -13,12 +13,13 @@ function App() {
     async function fetchPosts() {
       const response = await axios.get('/v2/posts')
       setVideos(response.data);
-
       return response;
     }
 
     fetchPosts();
   }, []);
+
+  console.log(videos);
 
   return (
     <div className="app">
