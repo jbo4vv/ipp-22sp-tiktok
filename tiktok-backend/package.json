@@ -4,10 +4,6 @@
   "description": "",
   "main": "server.js",
   "type": "module",
-  "engines": {
-    "node": ">6.x.x",
-    "npm": ">3.9.5"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.10"
   }
 }
