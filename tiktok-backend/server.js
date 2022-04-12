@@ -29,7 +29,7 @@ mongoose.connect(connection_url,{
 
 
 //api endpoints
-app.get("/", (req,res) => res.status(200).send('Hello World'));
+app.get("/", (req,res) => res.status(200).send('Hello World 55AMG'));
 
 app.get('/v1/posts', (req,res) => res.status(200).send(data));
 
