@@ -9,6 +9,11 @@ const port = 9000;
 
 //middlewares
 app.use(express.json());
+app.use((req, res, next)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*'),
+    res.setHeader('Access-Control-Allow-Headers', '*'),
+    next()
+})
 
 //DB config
 const connection_url='mongodb+srv://admin1:skyd5ApLipRC5ay5@cluster0.ubqcm.mongodb.net/tiktok?retryWrites=true&w=majority';
