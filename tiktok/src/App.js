@@ -9,13 +9,12 @@ function App() {
   const [videos, setVideos] = useState([]);
 
   
-  useEffect(() =>{
+  useEffect(() => {
     async function fetchPosts() {
       const response = await axios.get('/v2/posts')
       setVideos(response.data);
       return response;
     }
-
     fetchPosts();
   }, []);
 
@@ -27,7 +26,7 @@ function App() {
     <div className="app__videos">
       {videos.map(({url, channel, description, song, likes, messages, shares}) => (
         <Video 
-          url ={url}
+          url = {url}
           channel = {channel}
           song = {song}
           likes = {likes}
