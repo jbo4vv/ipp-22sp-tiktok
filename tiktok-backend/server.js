@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import Videos from './dbModel.js';
 import Data from "./data.js";
 
-const connection_url = "mongodb+srv://admin:MnNO1Fm4ubKV3tfy@cluster0.5ljzs.mongodb.net/tiktok?retryWrites=true&w=majority";
+
 
 mongoose.connect(connection_url,{
     useNewUrlParser: true,
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     next()
 })
 //DB config
-
+const connection_url="mongodb+srv://admin:MnNO1Fm4ubKV3tfy@cluster0.op1mj.mongodb.net/tiktok?retryWrites=true&w=majority"
 //api endpoints
 app.get('/', (req,res) => res.status(200).send('Hello World'));
 
